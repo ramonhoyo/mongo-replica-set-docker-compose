@@ -42,3 +42,8 @@ services:
       - ./scripts:/scripts
     restart: "no"
     entrypoint: ["bash", "/scripts/mongo_setup.sh"]
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - 6379:6379
